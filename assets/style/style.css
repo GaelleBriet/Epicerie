@@ -16,6 +16,12 @@
   src: url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
 }
 
+:root {
+  --color1: rgb(19, 51, 88);
+  --color2: rgb(71, 139, 200);
+  --color3: #425465;
+}
+
 body {
   background-color: rgb(229, 229, 228);
 }
@@ -58,14 +64,14 @@ body {
 #menu nav ul li {
   list-style-type: none;
   color: rgb(19, 51, 88);
-  border-bottom: 2px solid rgb(19, 51, 88);
+  border-bottom: 2px solid var(--color1);
   padding-bottom: 8px;
   font-size: 1rem;
 }
 
 #menu nav ul li:hover {
   color: rgb(71, 139, 200);
-  border-bottom: 2px solid rgb(71, 139, 200);
+  border-bottom: 2px solid var(--color2);
   cursor: pointer;
 }
 
@@ -127,10 +133,10 @@ body {
 }
 
 .section2 h3 {
-  margin-top: 20px;
+  /* margin-top: 20px; */
   font-size: 3rem;
   width: 1020px;
-  margin: auto;
+  margin: 20px auto;
   font-family: "Great Vibes", cursive;
 }
 
@@ -190,19 +196,20 @@ body {
 
 .section4 {
   height: 739px;
-  margin-top: 90px;
-}
-
-.section4 #intro {
-  text-align: center;
-  margin-bottom: 50px;
+  padding-top: 90px;
 }
 
 .section4 #intro h4 {
   font-size: 1.5rem;
-  color: rgb(19, 51, 88);
+  color: var(--color1);
   font-weight: normal;
-  margin-bottom: 1rem;
+  margin-bottom: 35px;
+  text-align: center;
+}
+
+.section4 #intro p {
+  text-align: center;
+  margin-bottom: 30px;
 }
 
 #grille2 {
@@ -211,6 +218,7 @@ body {
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(1, 1fr);
   grid-template-areas: "sandwich planche dessert";
+  justify-items: center;
 }
 
 .bloc1 {
@@ -231,7 +239,7 @@ body {
 #grille2 h4 {
   text-align: center;
   font-size: 1.5rem;
-  color: rgb(19, 51, 88);
+  color: var(--color1);
   font-weight: normal;
   margin-bottom: 30px;
 }
@@ -243,6 +251,126 @@ body {
 
 #fin {
   font-size: 1.2rem;
-  color: rgb(19, 51, 88);
+  color: var(--color1);
   text-align: center;
+  margin: 50px auto;
+}
+
+/***** SECTION 5 *****/
+
+.section5 {
+  height: 707px;
+}
+
+#grille3 {
+  height: 707px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas:
+    "img1 img1 img2 img2"
+    "img1 img1 img3 img4";
+}
+
+#img1 {
+  grid-area: img1;
+  background-image: url(../img/5.jpg);
+  /* background-position: center; */
+  background-size: cover;
+}
+
+#img2 {
+  grid-area: img2;
+  background: url(../img/6.jpg);
+  background-size: cover;
+}
+
+#img3 {
+  grid-area: img3;
+  background-image: url(../img/7.jpg);
+  background-size: cover;
+}
+
+#img4 {
+  grid-area: img4;
+  background-image: url(../img/8.jpg);
+  background-size: cover;
+}
+
+/***** SECTION 6 *****/
+
+.section6 {
+  height: 771px;
+  background-color: burlywood;
+}
+
+/***** SECTION 7 ****/
+
+.section7 {
+  height: 707px;
+  background-color: aquamarine;
+}
+
+/***** SECTION8 *****/
+
+.section8 {
+  height: 773px;
+}
+
+.section8 h6 {
+  text-align: center;
+  font-weight: normal;
+  margin-top: 100px;
+  font-size: 1.125rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+.section8 p {
+  margin: 30px auto;
+  text-align: center;
+  font-weight: normal;
+  line-height: 26px;
+  padding: 0 80px;
+}
+
+#formulaire {
+  display: flex;
+  flex-direction: column;
+  width: 570px;
+  margin: 49px auto;
+}
+
+#nom,
+#email,
+#tel {
+  width: 550px;
+  height: 50px;
+  margin-bottom: 10px;
+  font-family: "Raleway";
+  padding: 10px;
+}
+
+#message {
+  width: 550px;
+  margin-bottom: 10px;
+  font-family: "Raleway";
+  padding: 10px;
+}
+
+#bouton {
+  border: var(--color3) solid 2px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: bolder;
+  padding: 15px 25px;
+  background: #fff;
+  position: relative;
+  left: 200px;
+  /* width: 550px; */
+}
+
+#bouton:hover {
+  background-color: var(--color3);
+  color: #fff;
 }
