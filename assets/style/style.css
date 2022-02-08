@@ -17,9 +17,11 @@
 }
 
 :root {
-  --color1: rgb(19, 51, 88);
+  --color1: rgb(65, 77, 90);
   --color2: rgb(71, 139, 200);
   --color3: #425465;
+  --color4: #cfd5dd;
+  --color5: rgb(19, 49, 84);
 }
 
 body {
@@ -80,7 +82,7 @@ body {
   height: 65px;
 }
 
-/***** SECTION 1 *****/
+/***** SECTION 1 PRESENTATION*****/
 
 .section1 {
   height: 897px;
@@ -94,22 +96,22 @@ body {
 }
 
 .section1 p {
-  color: rgb(255, 255, 255);
+  color: var(--color4);
   font-size: 1.125rem;
   text-align: center;
   width: 1034px;
   margin: auto;
-  margin-top: 400px;
-  text-shadow: black 0px 3px 10px;
+  padding-top: 750px;
+  text-shadow: 4px 1px 3px rgba(0, 0, 0, 0.6);
 }
 
-.fas {
+.fa-sort-down {
   color: white;
   font-size: 5rem;
   margin: auto;
   margin-bottom: 20px;
 }
-/***** SECTION 2 *****/
+/***** SECTION 2 ABOUT*****/
 
 .section2 {
   height: 412px;
@@ -130,6 +132,7 @@ body {
   letter-spacing: 4px;
   text-transform: uppercase;
   font-family: "Raleway", sans-serif;
+  color: var(--color5);
 }
 
 .section2 h3 {
@@ -140,7 +143,7 @@ body {
   font-family: "Great Vibes", cursive;
 }
 
-/***** SECTION 3 *****/
+/***** SECTION 3 GRILLE*****/
 
 .section3 {
   height: 810px;
@@ -160,25 +163,31 @@ body {
   grid-area: a;
   background-image: url(../img/2.jpg);
   background-size: cover;
+  border-top: 2px solid var(--color4);
 }
 .cell2 {
   grid-area: b;
+  border-top: 1px solid var(--color4);
 }
 .cell3 {
   grid-area: c;
   background-image: url(../img/3.jpg);
   background-size: cover;
+  border-top: 2px solid var(--color4);
 }
 .cell4 {
   grid-area: d;
+  border-bottom: 1px solid var(--color4);
 }
 .cell5 {
   grid-area: e;
   background-image: url(../img/4.jpg);
   background-size: cover;
+  border-bottom: 2px solid var(--color4);
 }
 .cell6 {
   grid-area: f;
+  border-bottom: 1px solid var(--color4);
 }
 
 .cell2,
@@ -187,21 +196,21 @@ body {
   display: flex;
   padding: 30px;
   flex-direction: column;
-  font-size: 1.5rem;
+  font-size: 1rem;
   text-align: center;
   justify-content: center;
 }
 
-/***** SECTION 4 *****/
+/***** SECTION 4 GOURMAND*****/
 
 .section4 {
   height: 739px;
-  padding-top: 90px;
+  padding-top: 60px;
 }
 
 .section4 #intro h4 {
   font-size: 1.5rem;
-  color: var(--color1);
+  color: var(--color5);
   font-weight: normal;
   margin-bottom: 35px;
   text-align: center;
@@ -213,35 +222,57 @@ body {
 }
 
 #grille2 {
-  height: 349px;
+  height: 400px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(1, 1fr);
   grid-template-areas: "sandwich planche dessert";
   justify-items: center;
+  margin: 0 60px;
 }
 
 .bloc1 {
   grid-area: sandwich;
   padding: 30px;
+  /* border: 1px solid var(--color4); */
+  margin-right: 10px;
+  box-shadow: 6px 6px 8px 0px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 6px 6px 8px 0px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 6px 6px 8px 0px rgba(0, 0, 0, 0.4);
 }
 
 .bloc2 {
   grid-area: planche;
   padding: 30px;
+  margin-right: 10px;
+  /* border: 1px solid var(--color4); */
+  box-shadow: 6px 6px 8px 0px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 6px 6px 8px 0px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 6px 6px 8px 0px rgba(0, 0, 0, 0.4);
+  /* border-bottom: 1px solid var(--color4);
+  border-top: 1px solid var(--color4);
+  border-right: 1px solid var(--color4); */
 }
 
 .bloc3 {
   grid-area: dessert;
   padding: 30px;
+  /* border: 1px solid var(--color4); */
+  box-shadow: 6px 6px 8px 0px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 6px 6px 8px 0px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 6px 6px 8px 0px rgba(0, 0, 0, 0.4);
+  /* border-bottom: 1px solid var(--color4);
+  border-top: 1px solid var(--color4);
+  border-right: 1px solid var(--color4); */
 }
 
 #grille2 h4 {
   text-align: center;
   font-size: 1.5rem;
-  color: var(--color1);
+  color: var(--color5);
   font-weight: normal;
   margin-bottom: 30px;
+  /* text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2); */
 }
 
 #grille2 p {
@@ -253,10 +284,10 @@ body {
   font-size: 1.2rem;
   color: var(--color1);
   text-align: center;
-  margin: 50px auto;
+  margin: 40px auto 20px;
 }
 
-/***** SECTION 5 *****/
+/***** SECTION 5 PHOTOS*****/
 
 .section5 {
   height: 707px;
@@ -297,33 +328,44 @@ body {
   background-size: cover;
 }
 
-/***** SECTION 6 *****/
+/***** SECTION 6 MENU*****/
 
-.section6 {
+/* .section6 {
   height: 771px;
   background-color: burlywood;
-}
+} */
 
-/***** SECTION 7 ****/
+/***** SECTION 7 FEEDBACK****/
 
 .section7 {
   height: 707px;
   background-color: aquamarine;
 }
 
-/***** SECTION8 *****/
+/***** SECTION8 FORMULAIRE*****/
 
 .section8 {
   height: 773px;
+  position: relative;
+}
+
+.section8::after {
+  position: absolute;
+  content: "";
+  background: var(--color4);
+  height: 1px;
+  width: 100%;
+  bottom: 0px;
 }
 
 .section8 h6 {
   text-align: center;
   font-weight: normal;
-  margin-top: 100px;
+  padding-top: 60px;
   font-size: 1.125rem;
   letter-spacing: 4px;
   text-transform: uppercase;
+  color: var(--color5);
 }
 
 .section8 p {
@@ -339,6 +381,8 @@ body {
   flex-direction: column;
   width: 570px;
   margin: 49px auto;
+  position: relative;
+  /* font-size: 1.5rem; */
 }
 
 #nom,
@@ -349,6 +393,7 @@ body {
   margin-bottom: 10px;
   font-family: "Raleway";
   padding: 10px;
+  font-size: 1rem;
 }
 
 #message {
@@ -356,6 +401,7 @@ body {
   margin-bottom: 10px;
   font-family: "Raleway";
   padding: 10px;
+  font-size: 1rem;
 }
 
 #bouton {
@@ -365,12 +411,110 @@ body {
   font-weight: bolder;
   padding: 15px 25px;
   background: #fff;
-  position: relative;
-  left: 200px;
-  /* width: 550px; */
+  position: absolute;
+  top: 105%;
+  left: 60%;
+  transform: translate(-105%, -60%);
+  color: var(--color3);
 }
 
 #bouton:hover {
   background-color: var(--color3);
   color: #fff;
+  cursor: pointer;
+}
+
+/***** SECTION9 ADRESSE*****/
+
+.section9 {
+  height: 400px;
+  text-align: center;
+}
+
+.section9 h3 {
+  font-weight: normal;
+  font-size: 1.25rem;
+  padding-top: 50px;
+  padding-bottom: 30px;
+  color: var(--color5);
+}
+
+.section9 p {
+  font-size: 1rem;
+  line-height: 2rem;
+  padding-bottom: 30px;
+}
+
+.section9 p span {
+  color: var(--color5);
+}
+/***** SECTION10 GALERIE PHOTOS *****/
+
+.section10 {
+  height: 400px;
+  background-color: lightblue;
+}
+
+/***** FOOTER *****/
+footer {
+  height: 200px;
+}
+
+footer #footer-haut {
+  height: 100px;
+  background-color: var(--color1);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  position: relative;
+}
+
+footer #footer-haut #logo {
+  background-image: url(../img/logo-texte.jpg);
+  width: 290px;
+  height: 65px;
+  background-size: cover;
+}
+footer #footer-haut a {
+  text-decoration: none;
+  color: var(--color5);
+  font-size: 0.8rem;
+}
+
+.fa-facebook-f {
+  color: var(--color5);
+  padding-right: 10px;
+}
+
+.fa-envelope {
+  color: var(--color5);
+}
+
+#footer-haut::after {
+  position: absolute;
+  content: "";
+  background: var(--color5);
+  height: 1px;
+  width: 80%;
+  bottom: 0px;
+}
+
+footer #footer-bas {
+  height: 100px;
+  background-color: var(--color1);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+footer #footer-bas #bas-gauche {
+  color: #fff;
+  font-size: 0.8rem;
+}
+
+footer #footer-bas #bas-droite {
+  color: #fff;
+  font-size: 0.8rem;
 }
