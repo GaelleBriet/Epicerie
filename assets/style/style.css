@@ -8,17 +8,28 @@
 
 @font-face {
   font-family: "Raleway";
-  src: url("https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/raleway/v26/1Ptxg8zYS_SKggPN4iEgvnHyvveLxVvaorCIPrE.woff2)
+    format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
 }
-
 @font-face {
-  font-family: "Great Vibes";
-  src: url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
+  font-family: "Parisienne";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/parisienne/v12/E21i_d3kivvAkxhLEVZpQyhwDw.woff2)
+    format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
 }
 
 :root {
-  --color1: rgb(65, 77, 90);
-  --color2: rgb(71, 139, 200);
   --color3: #425465;
   --color4: #cfd5dd;
   --color5: rgb(19, 49, 84);
@@ -35,7 +46,8 @@ body {
   background-color: #fff;
 }
 
-/***** HEADER *****/
+/*********************************************************************/
+/******************** HEADER ********************/
 
 #en-tête {
   width: 1240px;
@@ -54,6 +66,7 @@ body {
   text-transform: uppercase;
   font-weight: bolder;
   margin: auto;
+  letter-spacing: 1px;
 }
 
 #menu nav ul {
@@ -65,15 +78,15 @@ body {
 
 #menu nav ul li {
   list-style-type: none;
-  color: rgb(19, 51, 88);
-  border-bottom: 2px solid var(--color1);
+  color: var(--color3);
+  border-bottom: 2px solid var(--color3);
   padding-bottom: 8px;
   font-size: 1rem;
 }
 
 #menu nav ul li:hover {
-  color: rgb(71, 139, 200);
-  border-bottom: 2px solid var(--color2);
+  color: var(--color5);
+  border-bottom: 3px solid var(--color5);
   cursor: pointer;
 }
 
@@ -82,7 +95,8 @@ body {
   height: 65px;
 }
 
-/***** SECTION 1 PRESENTATION*****/
+/*********************************************************************/
+/******************** SECTION 1 PRESENTATION ********************/
 
 .section1 {
   height: 897px;
@@ -95,23 +109,26 @@ body {
   justify-content: center;
 }
 
-.section1 p {
-  color: var(--color4);
-  font-size: 1.125rem;
-  text-align: center;
-  width: 1034px;
+.section1 .tooltip {
   margin: auto;
-  padding-top: 750px;
-  text-shadow: 4px 1px 3px rgba(0, 0, 0, 0.6);
+  width: 70%;
+  position: relative;
+  top: 20%;
 }
 
-.fa-sort-down {
-  color: white;
-  font-size: 5rem;
-  margin: auto;
-  margin-bottom: 20px;
+.section1 .tooltip p {
+  color: var(--color4);
+  background: none repeat scroll 0 0 rgba(34, 34, 34, 0.7);
+  padding: 5px 10px;
+  border-radius: 3px;
+  font-size: 2rem;
+  font-weight: normal;
+  font-style: italic;
+  text-align: left;
+  font-family: "Parisienne", cursive;
 }
-/***** SECTION 2 ABOUT*****/
+/*********************************************************************/
+/******************** SECTION 2 ABOUT ********************/
 
 .section2 {
   height: 412px;
@@ -140,10 +157,11 @@ body {
   font-size: 3rem;
   width: 1020px;
   margin: 20px auto;
-  font-family: "Great Vibes", cursive;
+  font-family: "Parisienne", cursive;
 }
 
-/***** SECTION 3 GRILLE*****/
+/*********************************************************************/
+/******************** SECTION 3 GRILLE ********************/
 
 .section3 {
   height: 810px;
@@ -201,11 +219,22 @@ body {
   justify-content: center;
 }
 
-/***** SECTION 4 GOURMAND*****/
+/*********************************************************************/
+/******************** SECTION 4 GOURMAND ********************/
 
 .section4 {
   height: 739px;
   padding-top: 60px;
+  position: relative;
+}
+
+.section4::after {
+  position: absolute;
+  content: "";
+  background: var(--color4);
+  height: 1px;
+  width: 100%;
+  bottom: 0px;
 }
 
 .section4 #intro h4 {
@@ -282,15 +311,16 @@ body {
 
 #fin {
   font-size: 1.2rem;
-  color: var(--color1);
+  color: var(--color5);
   text-align: center;
   margin: 40px auto 20px;
 }
 
-/***** SECTION 5 PHOTOS*****/
+/*********************************************************************/
+/******************** SECTION 5 PHOTOS ********************/
 
 .section5 {
-  height: 707px;
+  height: 720px;
 }
 
 #grille3 {
@@ -328,6 +358,7 @@ body {
   background-size: cover;
 }
 
+/*********************************************************************/
 /***** SECTION 6 MENU*****/
 
 /* .section6 {
@@ -335,14 +366,122 @@ body {
   background-color: burlywood;
 } */
 
-/***** SECTION 7 FEEDBACK****/
+/*********************************************************************/
+/******************** SECTION 7 FEEDBACK ********************/
 
 .section7 {
-  height: 707px;
-  background-color: aquamarine;
+  height: 900px;
+  position: relative;
 }
 
-/***** SECTION8 FORMULAIRE*****/
+.section7 #feedback p {
+  text-align: center;
+  font-size: 1.5rem;
+  color: var(--color5);
+  font-weight: normal;
+  padding-top: 30px;
+}
+/* la box qui contient les images */
+.slider-container {
+  height: 80%;
+  width: 90%;
+  top: 5%;
+  left: 5%;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+/* la zone de navigation */
+.menu {
+  position: absolute;
+  left: 0;
+  z-index: 900;
+  width: 100%; /* 100% du parent .slider-container donc 600px */
+  bottom: 20px;
+}
+
+.menu label {
+  cursor: pointer;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: var(--color4);
+  border-radius: 50px; /* rond */
+}
+.menu label:hover {
+  background: var(--color5);
+}
+
+/*la zone des images*/
+.slide {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 100%; /* pousse la zone a 100% de la gauche */
+  z-index: 10;
+  background-size: cover;
+  background-position: 50% 50%; /* background position center */
+  transition: left 0s 1s;
+}
+
+/*le premier element avec la classe slide qui suis le/les element(s) dont l'id commence par slide et qui est/sont checked */
+[id^="slide"]:checked + .slide {
+  left: 0;
+  z-index: 100;
+  transition: left 0.9s ease-in-out;
+}
+
+/* les images - slides */
+.slide-1 {
+  background-image: url(../img/9.jpg);
+  /* background-attachment: fixed; */
+}
+.slide-2 {
+  background-image: url(../img/15.jpg);
+}
+.slide-3 {
+  background-image: url(../img/14.jpg);
+}
+.slide-4 {
+  background-image: url(../img/12.jpg);
+}
+
+/* tooltip */
+.section7 .tooltip {
+  position: absolute; /* par rapport au container */
+  top: 70%;
+  width: 70%;
+  left: 5%;
+}
+
+.section7 .tooltip p {
+  color: var(--color4);
+  background: none repeat scroll 0 0 rgba(34, 34, 34, 0.7);
+  padding: 5px 10px;
+  border-radius: 3px;
+  font-size: 2rem;
+  font-weight: normal;
+  font-style: italic;
+  text-align: left;
+  font-family: "Parisienne", cursive;
+}
+
+/* #slide-dot-1 */
+[id^="slide-dot"] {
+  display: none;
+}
+
+.section7::after {
+  position: absolute;
+  content: "";
+  background: var(--color4);
+  height: 1px;
+  width: 100%;
+  bottom: 0px;
+}
+/*********************************************************************/
+/******************** SECTION8 FORMULAIRE ********************/
 
 .section8 {
   height: 773px;
@@ -420,11 +559,12 @@ body {
 
 #bouton:hover {
   background-color: var(--color3);
-  color: #fff;
+  color: var(--color4);
   cursor: pointer;
 }
 
-/***** SECTION9 ADRESSE*****/
+/*********************************************************************/
+/******************** SECTION9 ADRESSE ********************/
 
 .section9 {
   height: 400px;
@@ -435,10 +575,18 @@ body {
   font-weight: normal;
   font-size: 1.25rem;
   padding-top: 50px;
-  padding-bottom: 30px;
+  padding-bottom: 10px;
   color: var(--color5);
 }
 
+.section9 #cursive {
+  font-weight: normal;
+  font-size: 1.25rem;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  color: var(--color5);
+  font-family: "Parisienne";
+}
 .section9 p {
   font-size: 1rem;
   line-height: 2rem;
@@ -448,21 +596,24 @@ body {
 .section9 p span {
   color: var(--color5);
 }
-/***** SECTION10 GALERIE PHOTOS *****/
+
+/*********************************************************************/
+/******************** SECTION10 GALERIE PHOTOS ********************/
 
 .section10 {
   height: 400px;
   background-color: lightblue;
 }
 
-/***** FOOTER *****/
+/*********************************************************************/
+/******************** FOOTER ********************/
 footer {
   height: 200px;
 }
 
 footer #footer-haut {
   height: 100px;
-  background-color: var(--color1);
+  background-color: var(--color3);
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -478,31 +629,31 @@ footer #footer-haut #logo {
 }
 footer #footer-haut a {
   text-decoration: none;
-  color: var(--color5);
+  color: var(--color4);
   font-size: 0.8rem;
 }
 
 .fa-facebook-f {
-  color: var(--color5);
+  color: var(--color4);
   padding-right: 10px;
 }
 
 .fa-envelope {
-  color: var(--color5);
+  color: var(--color4);
 }
 
 #footer-haut::after {
   position: absolute;
   content: "";
-  background: var(--color5);
+  background: var(--color4);
   height: 1px;
   width: 80%;
   bottom: 0px;
 }
 
 footer #footer-bas {
-  height: 100px;
-  background-color: var(--color1);
+  height: 80px;
+  background-color: var(--color3);
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -510,11 +661,11 @@ footer #footer-bas {
 }
 
 footer #footer-bas #bas-gauche {
-  color: #fff;
+  color: var(--color4);
   font-size: 0.8rem;
 }
 
 footer #footer-bas #bas-droite {
-  color: #fff;
+  color: var(--color4);
   font-size: 0.8rem;
 }
